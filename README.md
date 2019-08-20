@@ -6,7 +6,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|null: false, unique:true|
-|name|text|null: false|
+|name|string|null: false|
 |email|string|null: false, unique:true|
 |password|string|null: false|
 
