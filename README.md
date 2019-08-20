@@ -1,24 +1,53 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#--------------------------------------------------------#
+## usersテーブル
 
-Things you may want to cover:
+|Column|Type|Options|
+|------|----|-------|
+|id|integer|null: false, unique:true|
+|name|string|null: false|
+|email|string|null: false, unique:true|
+|password|string|null: false|
 
-* Ruby version
+### Association
+- has_many :users_groups
+- has_many :groups, through: :users_groups
+- has_many :comments
+#--------------------------------------------------------#
+## groupsテーブル
 
-* System dependencies
+|Column|Type|Options|
+|------|----|-------|
+|id|integer|null: false, unique:true|
+|name|string|null: false|
 
-* Configuration
+### Association
+- has_many :users_groups
+- has_many :users, through: :users_groups
+- has_many :comments
+#--------------------------------------------------------#
+## commentsテーブル
 
-* Database creation
+|Column|Type|Options|
+|------|----|-------|
+|id|integer|null: false, unique:true|
+|comment|text||
+|image|text||
+|user_id|references|null: false, foreign_key: true|
+|group_id|references|null: false, foreign_key: true|
+### Association
+- belongs_to :group
+- belongs_to :user
+#--------------------------------------------------------#
+## groups_usersテーブル
 
-* Database initialization
+|Column|Type|Options|
+|------|----|-------|
+|id|integer|null: false, unique:true|
+|user_id|references|null: false, foreign_key: true|
+|group_id|references|null: false, foreign_key: true|
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Association
+- belongs_to :user
+- belongs_to :group
