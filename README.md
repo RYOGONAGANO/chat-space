@@ -11,8 +11,9 @@
 |password|string|null: false|
 
 ### Association
-- has_many :group_user
-
+- has_many :users_groups
+- has_many :groups, through: :users_groups
+- has_many :comments
 #--------------------------------------------------------#
 ## groupsテーブル
 
@@ -22,19 +23,22 @@
 |groupname|text|null: false|
 
 ### Association
-- has_many :group_user
-
+- has_many :users_groups
+- has_many :users, through: :users_groups
+- has_many :comments
 #--------------------------------------------------------#
 ## commentsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|null: false, unique:true|
-|user_group_id|integer|null: false, foreign_key: true|
+|comment|text||
 |image|text||
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
 ### Association
-- belongs_to :group_user
-
+- belongs_to :group
+- belongs_to :user
 #--------------------------------------------------------#
 ## groups_usersテーブル
 
@@ -43,9 +47,7 @@
 |id|integer|null: false, unique:true|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
-|comment_id|integer|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :user
 - belongs_to :group
-- has_many :comment
