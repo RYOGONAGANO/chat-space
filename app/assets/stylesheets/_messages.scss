@@ -1,0 +1,183 @@
+a {
+  &:visited {
+    color:  #ffffff;
+  }
+}
+.header {
+  background-color: #38AEF0;
+  color: #ffffff;
+  &__logo {
+    text-align: center;
+  }
+}
+.content-leftside{
+  float: left;
+  width:300px;
+  &__upper {
+    display: flex;
+    height:100px;
+    justify-content: space-between;
+    align-items:center;
+    background-color: #253141;
+    &__text {
+      padding:0 0 0 20px;
+      font-size: 16px;
+      font-weight:bold; 
+      color: #ffffff;
+    }
+    &__icon {
+      padding:0 20px 0 0;
+    }
+  }
+  &__lower {
+    height:calc(100vh - 100px);
+    background-color: #2f3e51;
+    color: #ffffff;
+    &__groupname {
+      padding:20px 20px 0 20px;
+      font-size: 16px;
+    }
+    &__text {
+      padding:5px 20px 20px 20px;
+      font-size: 10px;
+    }
+    &__groupname {
+      padding:20px 20px 0 20px;
+      font-size: 16px;
+    }
+    &__text {
+      padding:5px 20px 20px 20px;
+      font-size: 10px;
+    }
+    &__groupname {
+      padding:20px 20px 0 20px;
+      font-size: 16px;
+    }
+    &__text {
+      padding:5px 20px 20px 20px;
+      font-size: 10px;
+    }  
+  }
+}
+.content-rightside{
+  float: left;
+  width: calc(100vw - 300px);
+    &__upper {
+    display: flex;
+    height:100px;
+    justify-content: space-between;
+    background-color: #fafafa;
+    border-bottom: solid 1px #eeeeee;
+      &__left {
+        &__groupname {
+          padding:35px 0 0 40px;
+          font-size: 20px;
+        }
+        &__username {
+          padding:15px 0 0 40px;
+          font-size: 12px;
+        }
+      }
+      padding:0 40px 0 0;
+      &__right {
+        border: 1px;
+        border: solid #7ee2e2;
+        color: #7ee2e2;
+        margin:28px 0 0 0;
+        padding:0 20px 0 20px;
+        line-height:40px;
+        height: 40px;
+        &__editbutton {
+        }
+      }
+    }
+    &__lower {
+      height:calc(100vh - 200px);
+      background-color: #fafafa;
+      &__uppersize {
+        padding:46px 0 0 40px;
+      }
+      &__userdays {
+        display: flex;
+          &__username {
+          padding:0 10px 10px 40px;
+          font-size: 16px;
+          font-weight:bold; 
+          color: #434a54;
+        }
+        &__days {
+          display: flex;
+          font-size: 12px;
+          color: #999999;
+        }
+      }
+      &__text {
+        padding:0 0 40px 40px;
+        font-size: 14px;
+        color: #434a54;
+      }
+      &__userdays {
+        display: flex;
+          &__username {
+          padding:0 10px 10px 40px;
+          font-size: 16px;
+          font-weight:bold; 
+          color: #434a54;
+        }
+        &__days {
+          display: flex;
+          font-size: 12px;
+          color: #999999;
+        }
+      }
+      &__text {
+        padding:0 0 40px 40px;
+        font-size: 14px;
+        color: #434a54;
+      }
+    &__bottom {
+      height:100px;
+      background-color: #f0e9e9;
+      &__box {
+        width: 100%;
+        display: flex;
+        height:100%;
+        align-items:center;
+        .form {
+          display: flex;
+          height:100%;
+          align-items:center;
+          &__message{
+            position: relative;
+            width: 700px;
+            height: 50px;
+            font-size: 16px;
+            margin:0 0 0 40px;
+            padding:0 10px 0 10px;
+          }
+          .form{
+            &__mask{
+              position: absolute;
+              right:165px;
+              &__image{
+                .icon{
+                }
+                .hidden{
+                  display: none;
+                }
+              }
+            }
+          }
+          &__submit{
+            float: right;
+            margin:0 40px 0 15px;
+            width: 100px;
+            height:50px;
+            color: #fff;
+            background-color: #38aef0;
+          }
+        }
+      }
+    }
+  } 
+}
