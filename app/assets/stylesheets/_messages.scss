@@ -27,6 +27,14 @@ a {
     }
     &__icon {
       padding:0 20px 0 0;
+
+      .icons {
+        display:flex;
+        .list{
+          margin:0 0 0 5px;
+
+        }
+      }
     }
   }
   &__lower {
@@ -66,7 +74,6 @@ a {
     display: flex;
     height:100px;
     justify-content: space-between;
-    background-color: #fafafa;
     border-bottom: solid 1px #eeeeee;
       &__left {
         &__groupname {
@@ -145,11 +152,12 @@ a {
         align-items:center;
         .form {
           display: flex;
+          width:calc(100vw - 300px);
           height:100%;
           align-items:center;
           &__message{
             position: relative;
-            width: 700px;
+            width: 100%;
             height: 50px;
             font-size: 16px;
             margin:0 0 0 40px;
