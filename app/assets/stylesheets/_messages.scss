@@ -27,44 +27,28 @@ a {
     }
     &__icon {
       padding:0 20px 0 0;
-
       .icons {
         display:flex;
         .list{
           margin:0 0 0 5px;
-
         }
       }
     }
   }
-  &__lower {
+  .groups {
     height:calc(100vh - 100px);
     background-color: #2f3e51;
     color: #ffffff;
-    &__groupname {
+    .group {
       padding:20px 20px 0 20px;
       font-size: 16px;
+      &__name{
+        margin-bottom: 5px;
+      }
+      &__message{
+        margin-bottom: 40px;
+      }
     }
-    &__text {
-      padding:5px 20px 20px 20px;
-      font-size: 10px;
-    }
-    &__groupname {
-      padding:20px 20px 0 20px;
-      font-size: 16px;
-    }
-    &__text {
-      padding:5px 20px 20px 20px;
-      font-size: 10px;
-    }
-    &__groupname {
-      padding:20px 20px 0 20px;
-      font-size: 16px;
-    }
-    &__text {
-      padding:5px 20px 20px 20px;
-      font-size: 10px;
-    }  
   }
 }
 .content-rightside{

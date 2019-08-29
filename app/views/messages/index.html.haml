@@ -2,38 +2,9 @@
   .header__logo
     -# グループを作成しました
 .contents
-  .content-leftside
-    .content-leftside__upper
-      .content-leftside__upper__text
-        -# test_user
-        = current_user.name
-      .content-leftside__upper__icon
-        -# =link_to "https://www.facebook.com/", class: "contents__btn contents__btn--facebook" do
-        -#   = fa_icon 'edit', class: "contents__btn--icon"
-        -#   %span<>
-        -# =link_to "https://twitter.com/", class: "contents__btn contents__btn--twitter" do
-        -#   = fa_icon 'cog', class: "contents__btn--icon"
-        %ul.icons
-          %li.list
-            -# = link_to do
-            = link_to new_group_path do
-              = fa_icon 'pencil-square-o', class: 'icon'
-          %li.list
-            = link_to edit_user_path(current_user) do
-              = fa_icon 'cog', class: 'icon'
-    .content-leftside__lower
-      .content-leftside__lower__groupname
-        グループ名
-      .content-leftside__lower__text
-        テキスト
-      .content-leftside__lower__groupname
-        グループ名
-      .content-leftside__lower__text
-        テキスト
-      .content-leftside__lower__groupname
-        グループ名
-      .content-leftside__lower__text
-        テキスト
+  .wrapper
+
+    = render 'shared/side_bar'
   .content-rightside
     .content-rightside__upper
       .content-rightside__upper__left
