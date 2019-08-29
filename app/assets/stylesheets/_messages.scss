@@ -1,6 +1,8 @@
 a {
+  color:  #ffffff;
+  text-decoration: none;
   &:visited {
-    color:  #ffffff;
+    color:  #ffffff ;
   }
 }
 .header {
@@ -36,6 +38,7 @@ a {
     }
   }
   .groups {
+    overflow: scroll;
     height:calc(100vh - 100px);
     background-color: #2f3e51;
     color: #ffffff;
@@ -59,6 +62,7 @@ a {
     height:100px;
     justify-content: space-between;
     border-bottom: solid 1px #eeeeee;
+    padding:0 40px 0 0;
       &__left {
         &__groupname {
           padding:35px 0 0 40px;
@@ -69,7 +73,6 @@ a {
           font-size: 12px;
         }
       }
-      padding:0 40px 0 0;
       &__right {
         border: 1px;
         border: solid #7ee2e2;
@@ -83,6 +86,7 @@ a {
       }
     }
     &__lower {
+      overflow: scroll;
       height:calc(100vh - 200px);
       background-color: #fafafa;
       &__uppersize {
