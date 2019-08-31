@@ -13,74 +13,16 @@
       .content-rightside__upper__right
         .content-rightside__upper__editbutton
           = link_to 'edit', '/groups/1/edit', style: "color:#7ee2e2"
-    .content-rightside__lower
-      .content-rightside__lower__uppersize
-      .content-rightside__lower__userdays
-        .content-rightside__lower__userdays__username
-          ユーザーネーム
-        .content-rightside__lower__userdays__days
-          2019/08/22(Thu)09:15:48
-      .content-rightside__lower__text
-        テキスト
-      .content-rightside__lower__userdays
-        .content-rightside__lower__userdays__username
-          ユーザーネーム
-        .content-rightside__lower__userdays__days
-          2019/08/22(Thu)09:15:48
-      .content-rightside__lower__text
-        テキスト
-      .content-rightside__lower__userdays
-        .content-rightside__lower__userdays__username
-          ユーザーネーム
-        .content-rightside__lower__userdays__days
-          2019/08/22(Thu)09:15:48
-      .content-rightside__lower__text
-        テキスト
-      .content-rightside__lower__userdays
-        .content-rightside__lower__userdays__username
-          ユーザーネーム
-        .content-rightside__lower__userdays__days
-          2019/08/22(Thu)09:15:48
-      .content-rightside__lower__text
-        テキスト
-      .content-rightside__lower__userdays
-        .content-rightside__lower__userdays__username
-          ユーザーネーム
-        .content-rightside__lower__userdays__days
-          2019/08/22(Thu)09:15:48
-      .content-rightside__lower__text
-        テキスト
-      .content-rightside__lower__userdays
-        .content-rightside__lower__userdays__username
-          ユーザーネーム
-        .content-rightside__lower__userdays__days
-          2019/08/22(Thu)09:15:48
-      .content-rightside__lower__text
-        テキスト
-      .content-rightside__lower__userdays
-        .content-rightside__lower__userdays__username
-          ユーザーネーム
-        .content-rightside__lower__userdays__days
-          2019/08/22(Thu)09:15:48
-      .content-rightside__lower__text
-        テキスト
+    .messages
+      = render @messages
     .content-rightside__lower__bottom
       .content-rightside__lower__bottom__box
         .form
           = form_for [@group, @message] do |f|
-            = f.text_field :content, class: 'form__message', placeholder: 'type a message'
-            .form__mask
-              = f.label :image, class: 'form__mask__image' do
-                = fa_icon 'picture-o', class: 'icon'
-                = f.file_field :image, class: 'hidden'
+            .formbox
+              = f.text_field :content, class: 'formbox__message', placeholder: 'type a message'
+              .form__mask
+                = f.label :image, class: 'form__mask__image' do
+                  = fa_icon 'picture-o', class: 'icon'
+                  = f.file_field :image, class: 'hidden'
             = f.submit 'Send', class: 'form__submit'
-
-
-
-    -#     %form{class: "form"}
-    -#       %input.form__message{placeholder: "type a message"}
-    -#       .form__mask
-    -#         %label.form__mask__image
-    -#           = fa_icon 'picture-o', class: 'icon'
-    -#           %input.hidden{type: 'file'}
-    -#       %input.form__submit{type: 'submit', value: 'Send'}
