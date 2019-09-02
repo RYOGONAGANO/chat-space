@@ -8,8 +8,9 @@
       .content-rightside__upper__left
         .content-rightside__upper__left__groupname
           グループ名
-        .content-rightside__upper__left__username
-          Member:ユーザーネーム
+          -# = group.name
+          = current_user.name
+
       .content-rightside__upper__right
         .content-rightside__upper__editbutton
           = link_to 'edit', '/groups/1/edit', style: "color:#7ee2e2"
