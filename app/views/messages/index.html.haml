@@ -7,13 +7,15 @@
     .content-rightside__upper
       .content-rightside__upper__left
         .content-rightside__upper__left__groupname
-          グループ名
-          -# = group.name
-          = current_user.name
-
+          = @group.name
+        .content-rightside__upper__left__username
+          member：
+          -@group.users.each do |user|
+            .member &nbsp;
+            = user.name
       .content-rightside__upper__right
         .content-rightside__upper__editbutton
-          = link_to 'edit', '/groups/1/edit', style: "color:#7ee2e2"
+          = link_to 'edit', edit_group_path(@group), style: "color:#7ee2e2"
     .messages
       = render @messages
     .content-rightside__lower__bottom

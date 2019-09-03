@@ -70,6 +70,7 @@ a {
           font-size: 20px;
         }
         &__username {
+          display:flex;
           padding:15px 0 0 40px;
           color: #999999;
           font-size: 12px;
@@ -92,14 +93,14 @@ a {
       height:calc(100vh - 200px);
     }
     &__lower {
-      height:calc(100vh - 200px);
+      // height:calc(100vh - 200px);
       background-color: #fafafa;
       &__uppersize {
         padding:46px 0 0 40px;
       }
       &__userdays {
         display: flex;
-          &__username {
+        &__username {
           padding:0 10px 10px 40px;
           font-size: 16px;
           font-weight:bold; 
