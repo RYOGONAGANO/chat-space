@@ -1,53 +1,28 @@
 $(function(){
   function buildHTML(message){
-    if ( message.image ) {
-      var html =
-       `<div class="message" data-message-id=${message.id}>
-          <div class="content-rightside__lower">
-            <div class="content-rightside__lower__uppersize">
+    var img = message.image ? "<img src=${message.image}>":""
+    var html =
+      `<div class="message" data-message-id=${message.id}>
+        <div class="content-rightside__lower">
+          <div class="content-rightside__lower__uppersize">
+          </div>
+          <div class="content-rightside__lower__userdays">
+            <div class="content-rightside__lower__userdays__username">
+              ${message.user_name}
             </div>
-            <div class="content-rightside__lower__userdays">
-              <div class="content-rightside__lower__userdays__username">
-                ${message.user_name}
-              </div>
-              <div class="content-rightside__lower__userdays__days">
-                ${message.date}
-              </div>
-            </div>
-            <div class="content-rightside__lower__text">
-              ${message.content}
-
-              <div>
-                <img src=${message.image} >
-              </div>
-
-
+            <div class="content-rightside__lower__userdays__days">
+              ${message.date}
             </div>
           </div>
-        </div>`
-      return html;
-    } 
-    else {
-      var html =
-       `<div class="message" data-message-id=${message.id}>
-          <div class="content-rightside__lower">
-            <div class="content-rightside__lower__uppersize">
-            </div>
-            <div class="content-rightside__lower__userdays">
-              <div class="content-rightside__lower__userdays__username">
-                ${message.user_name}
-              </div>
-              <div class="content-rightside__lower__userdays__days">
-                ${message.date}
-              </div>
-            </div>
-            <div class="content-rightside__lower__text">
-              ${message.content}
+          <div class="content-rightside__lower__text">
+            ${message.content}
+            <div>
+              ${img}
             </div>
           </div>
-        </div>`
-      return html;
-    };
+        </div>
+      </div>`
+    return html;
   }
   $('#new_message').on('submit', function(e){
     e.preventDefault();
