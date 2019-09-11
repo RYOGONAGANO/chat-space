@@ -19,3 +19,7 @@
             = f.email_field :email
         .actions
           = f.submit "Update", class: 'btn'
+      = form_tag('/users/search', method: :get, placeholder:'') do
+        = text_field_tag :name, :'', id:'searching-form', placeholder:'検索', autocomplete:'off'
+      .result
+        %ul
