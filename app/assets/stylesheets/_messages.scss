@@ -91,9 +91,11 @@ a {
     .messages{
       overflow: scroll;
       height:calc(100vh - 200px);
+      background-color: #fafafa;
+
     }
     &__lower {
-      background-color: #fafafa;
+
       &__uppersize {
         padding:46px 0 0 40px;
       }
