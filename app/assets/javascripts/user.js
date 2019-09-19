@@ -19,6 +19,8 @@ $(function(){
   $('#user-search-field').on('keyup', function(e){
     var input = $("#user-search-field").val();
     var group_id = $("#group_ids").val();
+
+
     $.ajax({
       type: 'GET',
       url:  '/users',
